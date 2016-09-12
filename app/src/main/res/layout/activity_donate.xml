@@ -81,4 +81,22 @@
             android:checked="false" />
     </RadioGroup>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/amountText"
+        android:id="@+id/amountText"
+        android:layout_below="@+id/amountPicker"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_alignTop="@+id/amountText"
+        android:layout_alignEnd="@+id/progressBar"
+        android:clickable="false" />
+
 </RelativeLayout>
