@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.View;
 import android.widget.Button;
 
 public class Donate extends AppCompatActivity {
@@ -27,5 +28,10 @@ public class Donate extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_donate, menu);
         return true;
+    }
+
+    public void donateButtonPressed (View view)
+    {
+        Log.v("Donate", "Donate Pressed!");
     }
 }

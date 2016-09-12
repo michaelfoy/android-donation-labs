@@ -36,6 +36,7 @@
         android:id="@+id/donateButton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="31dp" />
+        android:layout_marginBottom="31dp"
+        android:onClick="donateButtonPressed"/>
 
 </RelativeLayout>
