@@ -12,6 +12,7 @@ import android.widget.NumberPicker;
 import android.widget.ProgressBar;
 import android.widget.RadioGroup;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
@@ -26,6 +27,7 @@ public class Donate extends AppCompatActivity {
     private NumberPicker amountPicker;
     private EditText numberText;
     private int totalDonated = 0;
+    private TextView amountLabel;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -42,10 +44,12 @@ public class Donate extends AppCompatActivity {
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         amountPicker = (NumberPicker) findViewById(R.id.amountPicker);
         numberText = (EditText) findViewById(R.id.numberText);
+        amountLabel = (TextView) findViewById(R.id.AmountLabel);
 
         amountPicker.setMaxValue(1000);
         amountPicker.setMinValue(0);
         progressBar.setMax(1000);
+        amountLabel.setText("" + totalDonated);
 
         if (donateButton != null) {
             Log.v("Donate", "Really got the donate button");
@@ -75,6 +79,7 @@ public class Donate extends AppCompatActivity {
             }
         }
         progressBar.setProgress(totalDonated);
+        amountLabel.setText("" + totalDonated);
         String method = paymentMethod.getCheckedRadioButtonId() == R.id.PayPal ? "PayPal" : "Direct";
         Log.v("Donate", "Total donated increased to " + totalDonated + " by: " + method);
     }
