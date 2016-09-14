@@ -34,20 +34,19 @@
         android:layout_height="wrap_content"
         android:text="@string/donateButton"
         android:id="@+id/donateButton"
+        android:onClick="donateButtonPressed"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="31dp"
-        android:onClick="donateButtonPressed"/>
+        android:layout_alignEnd="@+id/numberText" />
 
     <ProgressBar
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/progressBar"
+        android:indeterminate="false"
         android:layout_above="@+id/donateButton"
-        android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/donateTitle"
-        android:indeterminate="false" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="23dp" />
 
     <NumberPicker
         android:layout_width="wrap_content"
@@ -87,16 +86,18 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/amountText"
         android:id="@+id/amountText"
-        android:layout_below="@+id/amountPicker"
-        android:layout_alignParentStart="true"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_above="@+id/numberText"
+        android:layout_alignParentStart="true" />
 
     <EditText
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:layout_alignTop="@+id/amountText"
-        android:layout_alignEnd="@+id/progressBar"
-        android:clickable="false" />
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/numberText"
+        android:text="@string/numberText"
+        android:layout_alignBottom="@+id/amountPicker"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
