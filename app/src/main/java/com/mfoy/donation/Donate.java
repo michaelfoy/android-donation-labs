@@ -12,6 +12,7 @@ import android.widget.NumberPicker;
 import android.widget.ProgressBar;
 import android.widget.RadioGroup;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -62,7 +63,10 @@ public class Donate extends AppCompatActivity {
     }
 
     public void donateButtonPressed(View view) {
-        if (amountPicker.getValue() != 0) {
+        if (totalDonated >= 1000) {
+            Toast toast = Toast.makeText(this, "Target Exceeded!", Toast.LENGTH_SHORT);
+            toast.show();
+        } else if (amountPicker.getValue() != 0) {
             totalDonated += amountPicker.getValue();
         } else {
             String text = numberText.getText().toString();
