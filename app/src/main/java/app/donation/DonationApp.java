@@ -9,13 +9,13 @@ import java.util.List;
 
 public class DonationApp extends Application
 {
-    public final int       target       = 10000;
+    public final int       target       = 1000;
     public int             totalDonated = 0;
     public List<Donation> donations    = new ArrayList<Donation>();
 
     public boolean newDonation(Donation donation)
     {
-        boolean targetAchieved = totalDonated > target;
+        boolean targetAchieved = totalDonated >= target;
         if (!targetAchieved)
         {
             donations.add(donation);

@@ -44,29 +44,30 @@
         android:layout_height="wrap_content"
         android:id="@+id/progressBar"
         android:indeterminate="false"
-        android:layout_above="@+id/donateButton"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="23dp" />
+        android:layout_above="@+id/numberText"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="39dp" />
 
     <NumberPicker
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/amountPicker"
-        android:layout_centerVertical="true"
-        android:layout_alignEnd="@+id/progressBar"
-        android:orientation="vertical" />
+        android:orientation="vertical"
+        android:layout_alignTop="@+id/paymentMethod"
+        android:layout_alignParentEnd="true" />
 
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/amountPicker"
-        android:layout_alignEnd="@+id/donateSubtitle"
         android:orientation="vertical"
         android:id="@+id/paymentMethod"
-        android:layout_alignParentStart="true">
+        android:layout_below="@+id/donateSubtitle"
+        android:layout_toStartOf="@+id/donateButton"
+        android:layout_marginTop="28dp"
+        android:layout_alignEnd="@+id/donateSubtitle">
 
         <RadioButton
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/PayPal"
             android:id="@+id/PayPal"
@@ -87,8 +88,7 @@
         android:text="@string/amountText"
         android:id="@+id/amountText"
         android:textStyle="bold"
-        android:layout_alignBaseline="@+id/numberText"
-        android:layout_alignBottom="@+id/numberText"
+        android:layout_below="@+id/progressBar"
         android:layout_alignParentStart="true" />
 
     <EditText
@@ -98,7 +98,8 @@
         android:ems="10"
         android:id="@+id/numberText"
         android:text="@string/numberText"
-        android:layout_alignBottom="@+id/amountPicker"
+        android:layout_marginBottom="33dp"
+        android:layout_above="@+id/donateButton"
         android:layout_toEndOf="@+id/CurrentAmount" />
 
     <TextView
@@ -107,7 +108,8 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/CurrentAmount"
         android:id="@+id/CurrentAmount"
-        android:layout_below="@+id/progressBar"
+        android:layout_alignBaseline="@+id/donateButton"
+        android:layout_alignBottom="@+id/donateButton"
         android:layout_alignParentStart="true" />
 
     <TextView
@@ -115,7 +117,8 @@
         android:layout_height="wrap_content"
         android:text="@string/AmountLabel"
         android:id="@+id/AmountLabel"
-        android:layout_below="@+id/progressBar"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignTop="@+id/CurrentAmount"
+        android:layout_alignEnd="@+id/paymentMethod"
+        android:layout_alignBottom="@+id/CurrentAmount" />
 
 </RelativeLayout>

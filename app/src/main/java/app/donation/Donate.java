@@ -25,6 +25,7 @@ public class Donate extends AppCompatActivity {
     private EditText numberText;
     private int totalDonated = 0;
     private TextView amountLabel;
+    private DonationApp app;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,7 @@ public class Donate extends AppCompatActivity {
         amountPicker = (NumberPicker) findViewById(R.id.amountPicker);
         numberText = (EditText) findViewById(R.id.numberText);
         amountLabel = (TextView) findViewById(R.id.AmountLabel);
+        app = (DonationApp) getApplication();
 
         amountPicker.setMaxValue(1000);
         amountPicker.setMinValue(0);
@@ -55,22 +57,21 @@ public class Donate extends AppCompatActivity {
         return true;
     }
 
-    public void donateButtonPressed(View view) {
-        if (totalDonated >= 1000) {
-            Toast toast = Toast.makeText(this, "Target Exceeded!", Toast.LENGTH_SHORT);
-            toast.show();
-        } else if (amountPicker.getValue() != 0) {
-            totalDonated += amountPicker.getValue();
-        } else {
+    public void donateButtonPressed (View view) {
+        String method = paymentMethod.getCheckedRadioButtonId() == R.id.PayPal ? "PayPal" : "Direct";
+        int donatedAmount = amountPicker.getValue();
+        if (donatedAmount == 0) {
             String text = numberText.getText().toString();
-            if (text != "") {
-                totalDonated += Integer.parseInt(text);
+            if (!text.equals("")) {
+                donatedAmount = Integer.parseInt(text);
             }
         }
-        progressBar.setProgress(totalDonated);
-        amountLabel.setText("" + totalDonated);
-        String method = paymentMethod.getCheckedRadioButtonId() == R.id.PayPal ? "PayPal" : "Direct";
-        Log.v("Donate", "Total donated increased to " + totalDonated + " by: " + method);
+        if (donatedAmount > 0) {
+            app.newDonation(new Donation(donatedAmount, method));
+            progressBar.setProgress(app.totalDonated);
+            String totalDonatedStr = "$" + app.totalDonated;
+            amountLabel.setText(totalDonatedStr);
+        }
     }
 
     @Override
