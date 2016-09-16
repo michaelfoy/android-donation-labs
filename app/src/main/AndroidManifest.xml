@@ -10,7 +10,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name="app.donation.Donate"
-            android:label="Donation" >
+            android:label="DonationMike" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
