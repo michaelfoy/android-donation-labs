@@ -15,5 +15,8 @@
     <string name="reportTitle">Report</string>
     <string name="defaultAmount">00</string>
     <string name="defaultMethod">N/A</string>
+    <string name="Greeting">Welcome to the DonationMike App</string>
+    <string name="LoginButton">Log In</string>
+    <string name="SignupButton">Sign Up</string>
 
 </resources>

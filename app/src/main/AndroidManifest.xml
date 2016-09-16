@@ -11,16 +11,21 @@
         android:name="app.donation.DonationApp">
         <activity
             android:name="app.donation.Donate"
-            android:label="DonationMike" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:label="@string/donateTitle" >
         </activity>
+
         <activity
             android:name="app.donation.Report"
             android:label="@string/donateTitle" >
+        </activity>
+
+        <activity
+            android:name="app.donation.Welcome"
+            android:label="@string/donateTitle" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
