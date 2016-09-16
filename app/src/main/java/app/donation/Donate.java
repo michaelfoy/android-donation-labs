@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 
 public class Donate extends AppCompatActivity {
+
     private Button donateButton;
     private RadioGroup paymentMethod;
     private ProgressBar progressBar;
