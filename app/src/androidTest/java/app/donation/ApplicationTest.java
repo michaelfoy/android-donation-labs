@@ -1,4 +1,4 @@
-package com.mfoy.donation;
+package app.donation;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

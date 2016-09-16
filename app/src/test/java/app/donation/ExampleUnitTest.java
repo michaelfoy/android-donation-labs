@@ -1,4 +1,4 @@
-package com.mfoy.donation;
+package app.donation;
 
 import org.junit.Test;
 

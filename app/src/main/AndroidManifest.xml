@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mfoy.donation">
+    package="app.donation">
 
     <application
         android:allowBackup="true"
@@ -8,7 +8,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Donate">
+        <activity
+            android:name="app.donation.Donate"
+            android:label="Donation" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
