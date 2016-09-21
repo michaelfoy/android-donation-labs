@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">DonationMike</string>
-    <string name="donateTitle">Welcome Tony</string>
+    <string name="donateTitle">Welcome!</string>
     <string name="donateSubtitle">Please give generously</string>
     <string name="donateButton">Donate</string>
     <string name="action_settings">Settings</string>
@@ -18,5 +18,11 @@
     <string name="Greeting">Welcome to the DonationMike App</string>
     <string name="LoginButton">Log In</string>
     <string name="SignupButton">Sign Up</string>
-
+    <string name="signUpTitle">Sign Up</string>
+    <string name="firstName">First Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="email">Email</string>
+    <string name="password"></string>
+    <string name="passwordPlaceholder">Password</string>
+    <string name="registerButton">Register</string>
 </resources>

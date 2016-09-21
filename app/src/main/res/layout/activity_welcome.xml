@@ -29,6 +29,7 @@
         android:layout_height="wrap_content"
         android:text="@string/SignupButton"
         android:id="@+id/SignupButton"
+        android:onClick="signupButtonPressed"
         android:layout_below="@+id/LoginButton"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="51dp" />

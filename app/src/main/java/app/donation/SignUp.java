@@ -7,28 +7,22 @@ import android.view.View;
 import android.widget.Button;
 
 
-public class Welcome extends AppCompatActivity {
+public class SignUp extends AppCompatActivity {
 
-    private Button loginButton;
-    private Button signupButton;
+    private Button registerButton;
     private DonationApp app;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_welcome);
+        setContentView(R.layout.activity_signup);
 
-        loginButton = (Button) findViewById(R.id.LoginButton);
-        signupButton = (Button) findViewById(R.id.SignupButton);
+        registerButton = (Button) findViewById(R.id.registerButton);
         app = (DonationApp) getApplication();
     }
 
-    public void loginButtonPressed (View view) {
+    public void registerButtonPressed (View view) {
         startActivity (new Intent(this, Donate.class));
-    }
-
-    public void signupButtonPressed (View view) {
-        startActivity (new Intent(this, SignUp.class));
     }
 
     @Override
@@ -41,4 +35,3 @@ public class Welcome extends AppCompatActivity {
         super.onStop();
     }
 }
-

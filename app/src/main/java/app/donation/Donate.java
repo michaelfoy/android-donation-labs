@@ -24,7 +24,7 @@ public class Donate extends AppCompatActivity {
     private ProgressBar progressBar;
     private NumberPicker amountPicker;
     private EditText numberText;
-    private int totalDonated = 0;
+    private int totalDonated;
     private TextView amountLabel;
     private DonationApp app;
 
