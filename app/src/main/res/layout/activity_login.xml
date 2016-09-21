@@ -7,7 +7,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/signUpTitle"
+        android:text="@string/loginTitle"
         android:id="@+id/loginTitle"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
@@ -17,35 +17,13 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="@string/firstName"
-        android:ems="10"
-        android:id="@+id/firstName"
-        android:layout_marginTop="46dp"
-        android:layout_below="@+id/loginTitle"
-        android:layout_alignStart="@+id/lastName" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="@string/lastName"
-        android:ems="10"
-        android:id="@+id/lastName"
-        android:layout_marginTop="33dp"
-        android:layout_below="@+id/firstName"
-        android:layout_alignStart="@+id/loginTitle" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="10"
         android:id="@+id/email"
         android:text="@string/email"
         android:layout_marginTop="35dp"
-        android:layout_below="@+id/lastName"
-        android:layout_alignStart="@+id/lastName" />
+        android:layout_alignStart="@+id/loginTitle"
+        android:layout_below="@+id/loginTitle" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -70,9 +48,9 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/registerButton"
-        android:id="@+id/registerButton"
-        android:onClick="registerButtonPressed"
+        android:text="@string/loginTitle"
+        android:id="@+id/loginButton"
+        android:onClick="loginButtonPressed"
         android:layout_below="@+id/passwordPlaceholder"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="47dp" />
