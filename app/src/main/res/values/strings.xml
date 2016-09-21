@@ -26,4 +26,5 @@
     <string name="passwordPlaceholder">Password</string>
     <string name="registerButton">Register</string>
     <string name="loginTitle">Log In</string>
+    <string name="logout">Log Out</string>
 </resources>
