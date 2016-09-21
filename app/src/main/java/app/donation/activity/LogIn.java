@@ -1,13 +1,16 @@
-package app.donation;
+package app.donation.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import app.donation.R;
+import app.donation.activity.Donate;
+import app.donation.main.DonationApp;
 
 
 public class LogIn extends AppCompatActivity {

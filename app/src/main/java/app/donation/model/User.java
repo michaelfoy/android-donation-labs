@@ -1,4 +1,4 @@
-package app.donation;
+package app.donation.model;
 
 /**
  * @file User.java
@@ -9,10 +9,10 @@ package app.donation;
 
 public class User {
 
-    String firstName;
-    String lastName;
-    String email;
-    String password;
+    public String firstName;
+    public String lastName;
+    public String email;
+    public String password;
 
     /**
      * Creates a new User

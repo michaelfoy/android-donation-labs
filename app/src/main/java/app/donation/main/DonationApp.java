@@ -1,4 +1,4 @@
-package app.donation;
+package app.donation.main;
 
 import android.app.Application;
 import android.util.Log;
@@ -6,6 +6,9 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import app.donation.model.Donation;
+import app.donation.model.User;
 
 public class DonationApp extends Application
 {

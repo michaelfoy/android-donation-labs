@@ -1,10 +1,15 @@
-package app.donation;
+package app.donation.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import app.donation.R;
+import app.donation.activity.LogIn;
+import app.donation.activity.SignUp;
+import app.donation.main.DonationApp;
 
 
 public class Welcome extends AppCompatActivity {
