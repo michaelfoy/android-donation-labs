@@ -12,6 +12,7 @@ public class DonationApp extends Application
     public final int       target       = 1000;
     public int             totalDonated = 0;
     public List<Donation> donations    = new ArrayList<Donation>();
+    public List<User> users    = new ArrayList<User>();
 
     public boolean newDonation(Donation donation)
     {
@@ -27,6 +28,21 @@ public class DonationApp extends Application
             toast.show();
         }
         return targetAchieved;
+    }
+
+    public void newUser(User user) {
+        users.add(user);
+    }
+
+    public boolean registeredUser(String email, String password)
+    {
+        for (User user : users) {
+            if(user.email.equals(email) && user.password.equals(password)) {
+                Log.v("Login", "Logging in as: " + user.firstName + " " + user.lastName);
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
