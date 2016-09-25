@@ -18,7 +18,12 @@ import app.donation.R;
 import app.donation.main.DonationApp;
 import app.donation.model.Donation;
 
-
+/**
+ * @file Donate.java
+ * @brief Class to provide functionality to activity_donate.xml layout
+ * @version 2016.09.25
+ * @author michaelfoy
+ */
 public class Donate extends AppCompatActivity {
 
     private Button donateButton;
@@ -30,6 +35,11 @@ public class Donate extends AppCompatActivity {
     private TextView amountLabel;
     private DonationApp app;
 
+    /**
+     * Activates the layout and instantiates it's widgets
+     *
+     * @param savedInstanceState Saved data pertaining to the activity
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,10 +59,16 @@ public class Donate extends AppCompatActivity {
         amountLabel.setText("" + totalDonated);
 
         if (donateButton != null) {
-            Log.v("Donate", "Really got the donate button");
+            Log.v("DonationApp", "Donate button loaded");
         }
     }
 
+    /**
+     * Creates the menu
+     *
+     * @param menu Menu object
+     * @return True if menu successfully created
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -60,7 +76,10 @@ public class Donate extends AppCompatActivity {
         return true;
     }
 
-    public void donateButtonPressed (View view) {
+    /**
+     * Creates and saves a new donation, updates widget data
+     */
+    public void donateButtonPressed () {
         String method = paymentMethod.getCheckedRadioButtonId() == R.id.PayPal ? "PayPal" : "Direct";
         int donatedAmount = amountPicker.getValue();
         if (donatedAmount == 0) {
@@ -80,6 +99,11 @@ public class Donate extends AppCompatActivity {
         numberText.setText("0");
     }
 
+    /**
+     * Describes functionality for menu items
+     * @param item Menu item which has been selected
+     * @return True if operation successful
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {

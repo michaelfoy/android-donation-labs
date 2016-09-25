@@ -13,7 +13,12 @@ import app.donation.activity.Donate;
 import app.donation.main.DonationApp;
 import app.donation.model.User;
 
-
+/**
+ * @file SignUp.java
+ * @brief Class to provide functionality to activity_signup.xml layout
+ * @version 2016.09.25
+ * @author michaelfoy
+ */
 public class SignUp extends AppCompatActivity {
 
     private Button registerButton;
@@ -23,6 +28,11 @@ public class SignUp extends AppCompatActivity {
     private EditText password;
     private DonationApp app;
 
+    /**
+     * Activates the layout and instantiates it's widgets
+     *
+     * @param savedInstanceState Saved data pertaining to the activity
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +46,10 @@ public class SignUp extends AppCompatActivity {
         app = (DonationApp) getApplication();
     }
 
-    public void registerButtonPressed (View view) {
+    /**
+     * Registers a new user with input data, guides the user to login activity
+     */
+    public void registerButtonPressed () {
 
         String firstNameStr = firstName.getText().toString();
         String lastNameStr = lastName.getText().toString();
@@ -45,8 +58,8 @@ public class SignUp extends AppCompatActivity {
 
         User newUser = new User(firstNameStr, lastNameStr, emailStr, passwordStr);
         app.newUser(newUser);
-        Log.v("NewUser", "New User: " + firstNameStr + " " + lastNameStr);
-        startActivity (new Intent(this, Donate.class));
+        Log.v("DonationApp", "New User: " + firstNameStr + " " + lastNameStr);
+        startActivity (new Intent(this, LogIn.class));
     }
 
     @Override

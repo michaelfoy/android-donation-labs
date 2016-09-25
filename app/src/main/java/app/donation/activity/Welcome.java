@@ -11,13 +11,23 @@ import app.donation.activity.LogIn;
 import app.donation.activity.SignUp;
 import app.donation.main.DonationApp;
 
-
+/**
+ * @file Welcome.java
+ * @brief Class to provide functionality to activity_welcome.xml layout
+ * @version 2016.09.25
+ * @author michaelfoy
+ */
 public class Welcome extends AppCompatActivity {
 
     private Button loginButton;
     private Button signupButton;
     private DonationApp app;
 
+    /**
+     * Activates the layout and instantiates it's widgets
+     *
+     * @param savedInstanceState Saved data pertaining to the activity
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,11 +38,17 @@ public class Welcome extends AppCompatActivity {
         app = (DonationApp) getApplication();
     }
 
-    public void loginButtonPressed (View view) {
+    /**
+     * Starts the login activity
+     */
+    public void loginButtonPressed () {
         startActivity (new Intent(this, LogIn.class));
     }
 
-    public void signupButtonPressed (View view) {
+    /**
+     * Starts the signup activity
+     */
+    public void signupButtonPressed () {
         startActivity (new Intent(this, SignUp.class));
     }
 

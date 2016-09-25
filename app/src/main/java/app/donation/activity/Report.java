@@ -19,11 +19,22 @@ import app.donation.R;
 import app.donation.main.DonationApp;
 import app.donation.model.Donation;
 
+/**
+ * @file Report.java
+ * @brief Class to provide functionality to activity_report.xml layout
+ * @version 2016.09.25
+ * @author michaelfoy
+ */
 public class Report extends AppCompatActivity
 {
     private ListView listView;
     private DonationApp app;
 
+    /**
+     * Activates the layout and instantiates it's widgets
+     *
+     * @param savedInstanceState Saved data pertaining to the activity
+     */
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
@@ -37,6 +48,12 @@ public class Report extends AppCompatActivity
         listView.setAdapter(adapter);
     }
 
+    /**
+     * Creates the menu
+     *
+     * @param menu Menu object
+     * @return True if menu successfully created
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -44,6 +61,11 @@ public class Report extends AppCompatActivity
         return true;
     }
 
+    /**
+     * Describes functionality for menu items
+     * @param item Menu item which has been selected
+     * @return True if operation successful
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
@@ -56,6 +78,7 @@ public class Report extends AppCompatActivity
         }
         return true;
     }
+
 
     class DonationAdapter extends ArrayAdapter<Donation> {
         private Context context;

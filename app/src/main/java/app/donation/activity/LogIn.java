@@ -12,7 +12,12 @@ import app.donation.R;
 import app.donation.activity.Donate;
 import app.donation.main.DonationApp;
 
-
+/**
+ * @file Login.java
+ * @brief Class to provide functionality to activity_login.xml layout
+ * @version 2016.09.25
+ * @author michaelfoy
+ */
 public class LogIn extends AppCompatActivity {
 
     private Button loginButton;
@@ -20,6 +25,11 @@ public class LogIn extends AppCompatActivity {
     private EditText password;
     private DonationApp app;
 
+    /**
+     * Activates the layout and instantiates it's widgets
+     *
+     * @param savedInstanceState Saved data pertaining to the activity
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +41,10 @@ public class LogIn extends AppCompatActivity {
         app = (DonationApp) getApplication();
     }
 
-    public void loginButtonPressed (View view) {
+    /**
+     * If user data is correct, logs in the user.
+     */
+    public void loginButtonPressed () {
         String emailStr = email.getText().toString();
         String passwordStr = password.getText().toString();
 
