@@ -18,7 +18,7 @@ import app.donation.main.DonationApp;
  * @version 2016.09.25
  * @author michaelfoy
  */
-public class LogIn extends AppCompatActivity {
+public class LogIn extends AppCompatActivity implements View.OnClickListener{
 
     private Button loginButton;
     private EditText email;
@@ -36,6 +36,7 @@ public class LogIn extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         loginButton = (Button) findViewById(R.id.loginButton);
+        loginButton.setOnClickListener(this);
         email = (EditText) findViewById(R.id.email);
         password = (EditText) findViewById(R.id.password);
         app = (DonationApp) getApplication();
@@ -44,7 +45,8 @@ public class LogIn extends AppCompatActivity {
     /**
      * If user data is correct, logs in the user.
      */
-    public void loginButtonPressed () {
+    @Override
+    public void onClick (View view) {
         String emailStr = email.getText().toString();
         String passwordStr = password.getText().toString();
 

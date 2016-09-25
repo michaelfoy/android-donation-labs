@@ -19,7 +19,7 @@ import app.donation.model.User;
  * @version 2016.09.25
  * @author michaelfoy
  */
-public class SignUp extends AppCompatActivity {
+public class SignUp extends AppCompatActivity implements View.OnClickListener{
 
     private Button registerButton;
     private EditText firstName;
@@ -43,13 +43,15 @@ public class SignUp extends AppCompatActivity {
         email = (EditText) findViewById(R.id.email);
         password = (EditText) findViewById(R.id.password);
         registerButton = (Button) findViewById(R.id.registerButton);
+        registerButton.setOnClickListener(this);
         app = (DonationApp) getApplication();
     }
 
     /**
      * Registers a new user with input data, guides the user to login activity
      */
-    public void registerButtonPressed () {
+    @Override
+    public void onClick (View view) {
 
         String firstNameStr = firstName.getText().toString();
         String lastNameStr = lastName.getText().toString();

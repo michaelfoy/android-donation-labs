@@ -24,7 +24,7 @@ import app.donation.model.Donation;
  * @version 2016.09.25
  * @author michaelfoy
  */
-public class Donate extends AppCompatActivity {
+public class Donate extends AppCompatActivity implements View.OnClickListener {
 
     private Button donateButton;
     private RadioGroup paymentMethod;
@@ -57,6 +57,7 @@ public class Donate extends AppCompatActivity {
         amountPicker.setMinValue(0);
         progressBar.setMax(1000);
         amountLabel.setText("" + totalDonated);
+        donateButton.setOnClickListener(this);
 
         if (donateButton != null) {
             Log.v("DonationApp", "Donate button loaded");
@@ -79,7 +80,7 @@ public class Donate extends AppCompatActivity {
     /**
      * Creates and saves a new donation, updates widget data
      */
-    public void donateButtonPressed () {
+    public void onClick (View view) {
         String method = paymentMethod.getCheckedRadioButtonId() == R.id.PayPal ? "PayPal" : "Direct";
         int donatedAmount = amountPicker.getValue();
         if (donatedAmount == 0) {
@@ -97,6 +98,7 @@ public class Donate extends AppCompatActivity {
 
         amountPicker.setValue(0);
         numberText.setText("0");
+        Log.v("DonationApp", "Donation complete");
     }
 
     /**

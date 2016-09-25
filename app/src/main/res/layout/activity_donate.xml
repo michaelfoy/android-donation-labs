@@ -34,7 +34,6 @@
         android:layout_height="wrap_content"
         android:text="@string/donateButton"
         android:id="@+id/donateButton"
-        android:onClick="donateButtonPressed"
         android:layout_alignParentBottom="true"
         android:layout_alignEnd="@+id/progressBar" />
 

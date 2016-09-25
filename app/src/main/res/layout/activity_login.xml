@@ -41,7 +41,6 @@
         android:layout_height="wrap_content"
         android:text="@string/loginTitle"
         android:id="@+id/loginButton"
-        android:onClick="loginButtonPressed"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="47dp"
         android:layout_below="@+id/password" />

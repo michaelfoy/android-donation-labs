@@ -17,7 +17,7 @@ import app.donation.main.DonationApp;
  * @version 2016.09.25
  * @author michaelfoy
  */
-public class Welcome extends AppCompatActivity {
+public class Welcome extends AppCompatActivity implements View.OnClickListener {
 
     private Button loginButton;
     private Button signupButton;
@@ -35,21 +35,25 @@ public class Welcome extends AppCompatActivity {
 
         loginButton = (Button) findViewById(R.id.LoginButton);
         signupButton = (Button) findViewById(R.id.SignupButton);
+        signupButton.setOnClickListener(this);
+        loginButton.setOnClickListener(this);
         app = (DonationApp) getApplication();
     }
 
     /**
-     * Starts the login activity
+     * Starts the login or signup activity
      */
-    public void loginButtonPressed () {
-        startActivity (new Intent(this, LogIn.class));
-    }
-
-    /**
-     * Starts the signup activity
-     */
-    public void signupButtonPressed () {
-        startActivity (new Intent(this, SignUp.class));
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.LoginButton:
+                startActivity (new Intent(this, LogIn.class));
+                break;
+            case R.id.SignupButton:
+                startActivity (new Intent(this, SignUp.class));
+                break;
+            default:
+                break;
+        }
     }
 
     @Override
